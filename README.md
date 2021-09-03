@@ -69,3 +69,4 @@ Supongamos que en un momento dado la remisera de primera opción es Roxana, y el
 - para un viaje de 10 kilómetros para Ana María, la remisera elegida es Juana, porque su precio de 200 pesos, es menor al de Roxana (300 pesos), y la diferencia es de más de 30 pesos.
 - si el viaje es para Teresa, entonces Roxana ofrece 220 pesos y Juana 200. El precio de Juana es menor, pero la diferencia no llega a 30 pesos. Por lo tanto, la remisera elegido es Roxana.
 - si el viaje es de 4 kilómetros para Teresa, entonces Roxana cobra 88 pesos y Juana 100. El precio de Roxana es menor, por lo tanto Roxana es la elegida.  
+Fin
