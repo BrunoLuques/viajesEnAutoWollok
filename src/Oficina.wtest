@@ -1,0 +1,54 @@
+import Clientas.*
+import remiseras.*
+import Oficina.*
+
+/*
+	El criterio es el siguiente: 
+	si para ese viaje, el precio de la segunda remisera es menor al de la 
+	primera con una diferencia de más de 30 pesos, entonces se elige 
+	la segunda remisera; si no, se elige la primera.
+*/
+ 
+test "Primer viaje" {
+	/*
+	Supongamos que en un momento dado la remisera de primera opción es Roxana, 
+	y el de segunda opción es Juana. En este caso:
+	- para un viaje de 10 kilómetros para Ana María, la remisera elegida es 
+	Juana, porque su precio de 200 pesos, es menor al de Roxana (300 pesos), 
+	y la diferencia es de más de 30 pesos. 
+	*/
+	oficina.asignarRemiseras(roxana, juana)
+	assert.equals(oficina.remiseraElegidaParaViaje(anaMaria, 10), juana)
+}
+
+test "Segundo viaje" {
+	/*
+	para un viaje de 10 kilómetros:
+	- si el viaje es para Teresa, entonces Roxana ofrece 220 pesos y Juana 200.
+	El precio de Juana es menor, pero la diferencia no llega a 30 pesos.
+	Por lo tanto, la remisera elegido es Roxana.
+	*/
+	oficina.asignarRemiseras(roxana, juana)
+	assert.equals(oficina.remiseraElegidaParaViaje(teresa, 10), roxana)
+}
+
+test "Tercer viaje" {
+	/*
+	Para un viaje de 4 kilometros:
+	Roxana cobra 88 pesos y Juana 100. 
+	El precio de Roxana es menor, por lo tanto Roxana es la elegida.
+	*/
+	oficina.asignarRemiseras(roxana, juana)
+	assert.equals(oficina.remiseraElegidaParaViaje(teresa, 4), roxana)
+}
+
+
+
+
+
+
+
+
+
+
+

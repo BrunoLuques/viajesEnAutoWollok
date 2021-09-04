@@ -1,0 +1,7 @@
+import Clientas.*
+
+test "Precio por kilometro" {
+	assert.equals(ludmila.precioPorKilometro(), 18)
+	assert.equals(anaMaria.precioPorKilometro(), 30)
+	assert.equals(teresa.precioPorKilometro(), 22)
+}
